@@ -1,0 +1,176 @@
+/* initialisation */
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/*  */
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    text-align: center;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+
+/*  JSON.parse(Nouvelle_Tache)*/
+
+* {
+    transition: .3s;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+
+/* l'entete */
+
+header {
+    color: #fff;
+    background-color: #114131;
+    padding: 20px;
+}
+
+.date_time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+/* app body */
+
+#MainApp {
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+
+/* liste des taches */
+
+#List_tache {
+    height: 400px;
+}
+
+
+/* tache */
+
+.tache {
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    padding: 10px;
+    border-bottom: 2px #c5c2c2 solid;
+}
+
+.contenu_tache {
+    width: 70%;
+}
+
+span {
+    cursor: pointer;
+    width: 10%;
+    text-align: center;
+}
+
+.etat input {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+
+/* zone de saisie */
+
+.zone_saisie {
+    padding: 10px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.zone_saisie input {
+    width: 85%;
+    height: 35px;
+    outline: none;
+    padding-left: 5px;
+    border: none;
+}
+
+.zone_saisie input:focus {
+    color: #22795c
+}
+
+
+/* reset icon */
+
+.reset {
+    position: absolute;
+    bottom: 140px;
+    right: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: #22795c;
+}
+
+.reset-icon {
+    font-size: 40px;
+    color: #fff;
+}
+
+.trash {
+    color: #c40a0a;
+}
+
+.unchecked,
+.checked,
+.add-icon {
+    color: #22795c;
+}
+
+
+/*  */
+
+
+/* State class */
+
+.Task_done {
+    text-decoration: line-through;
+    font-style: italic;
+    color: #414040;
+}
+
+.TD_tache {
+    background-color: #96969634;
+}

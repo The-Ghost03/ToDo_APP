@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>ToDo List</title>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- date et heure -->
+
+        <div class="date_time">
+
+            <p class="date">date</p>
+            <p class="time">time</p>
+
+        </div>
+
+        <!-- titre app -->
+
+        <h1>
+            ANGE TODO APP
+        </h1>
+
+    </header>
+
+    <div id="MainApp">
+
+        <div class="reset">
+            <span class="reset-icon material-icons">
+                restart_alt
+                </span>
+        </div>
+
+        <div id="List_tache">
+
+            <!-- template tache -->
+
+            <div class="tache">
+                <span class="alreadyDone unchecked material-icons">
+                    radio_button_unchecked
+                    </span>
+                <p class="contenu_tache">Drink coffee</p>
+                <span class="trash material-icons">
+                    delete
+                    </span>
+            </div>
+
+
+            <div class="tache">
+                <span class="alreadyDone unchecked material-icons">radio_button_unchecked</span>
+                <p class="contenu_tache">finis this app</p>
+                <span class="trash material-icons">delete</span>
+            </div>
+
+            <div class="tache">
+                <span class="alreadyDone checked material-icons">
+                    radio_button_checked
+                    </span>
+                <p class="contenu_tache">Learn another things</p>
+                <span class="trash material-icons">
+                    delete
+                    </span>
+            </div>
+
+        </div>
+
+        <!-- zone de saisie -->
+
+        <div class="zone_saisie">
+            <input id="INPUT" type="text" placeholder="Ajouter une tache"> <span class="add-icon material-icons">
+                add_circle
+                </span>
+        </div>
+
+    </div>
+
+    <script src="App.js"></script>
+</body>
+
+</html>
