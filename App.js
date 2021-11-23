@@ -206,10 +206,12 @@ function Ajouter_Une_Tache(Tache_Saisie) {
 
     const position = "beforeend"
 
-    ListeDesTaches.insertAdjacentElement(position, text);
+    //ListeDesTaches.insertAdjacentElement(position, text);
+    ListeDesTaches.insertAdjacentHTML(position, text);
 
 }
-Ajouter_Une_Tache("hdy hdh")
+
+Ajouter_Une_Tache("new task")
     // - une fonction pour supprimer une tache dans la bd
 
 
