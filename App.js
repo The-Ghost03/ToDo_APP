@@ -83,7 +83,8 @@ function Ajouter_Une_Tache(Tache_Saisie) {
     Bouton_Tache_non_faite = Array.from(document.querySelectorAll(".unchecked"));
 }
 
-Ajouter_Une_Tache("new task");
+Ajouter_Une_Tache("new task added from the code for test purpose. but the removing function isn't setted yet");
+Ajouter_Une_Tache("new task 2 added from the code for test purpose. but the removing function isn't setted yet");
 
 
 
@@ -123,12 +124,6 @@ Zone_De_SAISE.addEventListener("keyup", (event) => {
         Zone_De_SAISE.value = "";
     }
 
-
-
-
-    Tableau_Tache = Array.from(document.querySelectorAll(".tache"));
-    Bouton_Tache_faite = Array.from(document.querySelectorAll(".checked"));
-    Bouton_Tache_non_faite = Array.from(document.querySelectorAll(".unchecked"));
 });
 
 
@@ -140,7 +135,40 @@ Zone_De_SAISE.addEventListener("keyup", (event) => {
 ///         frontend side          ///
 //////////////////////////////////////
 
+function Done_task(Tache_non_faite) {
 
+
+    Bouton_Tache_non_faite.forEach((element) => {
+
+        const Contenu_de_Tache = Tache_non_faite.parentElement.childNodes[3];
+        const Tache_Parente = Tache_non_faite.parentElement;
+
+        if (Tache_non_faite.classList.contains("unchecked")) {
+            Tache_non_faite.classList.remove("unchecked");
+
+            Tache_non_faite.classList.add("checked");
+
+            Contenu_de_Tache.classList.add("Task_done");
+            Tache_Parente.classList.add("TD_tache");
+
+            if (Tache_non_faite.classList.contains("checked")) {
+                Tache_non_faite.innerHTML = "radio_button_checked";
+            }
+        } else if (Tache_non_faite.classList.contains("checked")) {
+            Tache_non_faite.classList.remove("checked");
+
+            Contenu_de_Tache.classList.remove("Task_done");
+            Tache_Parente.classList.remove("TD_tache");
+
+            Tache_non_faite.classList.add("unchecked");
+
+            if (Tache_non_faite.classList.contains("unchecked")) {
+                Tache_non_faite.innerHTML = "radio_button_unchecked";
+            }
+        }
+
+    })
+}
 
 Tableau_Tache = Array.from(document.querySelectorAll(".tache"));
 Bouton_Tache_faite = Array.from(document.querySelectorAll(".checked"));
@@ -153,6 +181,7 @@ Bouton_Tache_non_faite.forEach((element) => {
     const Tache_Parente = element.parentElement;
 
     element.addEventListener("click", () => {
+
         if (element.classList.contains("unchecked")) {
             element.classList.remove("unchecked");
 
